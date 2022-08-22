@@ -25,5 +25,30 @@ Command line
     ./main
     ```
 
-### Configuration on VSCode
+Configuration on VSCode
+---
+
+### Run / Debug / task.json
+
+task.json support command substitution, thanks to that,
+we can include opencv library without typing a lot of args in task.json
+
+1. generate task.json by vscode (make sure the C/C++ extension is installed)
+
+    - Click Run and Debug
+    - A `Select a configuration` prompt popped up, choose Detected Task, C/C++: g++ build and debug active file
+    - Click Abort when any error messages pop up
+
+2. edit task.json
+
+    - make sure "command" is "g++" or "/usr/bin/g++"
+    - add this after the last element of "args"
+    ```
+        "`pkg-config --cflags --libs opencv`"
+    ```
+
+3. now the Run and Debug by vscode should successfully execute the program
+
+### VSCode Intellisense / c_cpp_properties.json
+
 
