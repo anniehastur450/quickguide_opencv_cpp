@@ -1,0 +1,1 @@
+# quickguide_opencv_cpp
