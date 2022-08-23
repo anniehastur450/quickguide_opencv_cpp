@@ -51,4 +51,7 @@ we can include opencv library without typing a lot of args in task.json
 
 ### VSCode Intellisense / c_cpp_properties.json
 
+as <opencv2/core.hpp> is under system includes (/usr/include),
+it is not required to add extra includePath in c_cpp_properties.json;
+therefore, c_cpp_properties.json is not needed for Intellisense to work
 
